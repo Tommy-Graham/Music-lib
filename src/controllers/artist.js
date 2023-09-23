@@ -1,3 +1,5 @@
+const db = require('../src/db/index.js');
+
 const createArtist = async (req, res) => {
     const { name, genre } = req.body
 
@@ -7,6 +9,6 @@ const createArtist = async (req, res) => {
     } catch (err) {
         res.status(500).json(err.message)
     }
-}
+};
 
 module.exports = { createArtist }
